@@ -2,6 +2,13 @@ if not (game.PlaceId == 79091703265657 or game.PlaceId == 85211729168715 or game
     return
 end
 
+local TweenService = game:GetService("TweenService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local CommF = ReplicatedStorage.Remotes.CommF_
+CommF:InvokeServer("SetTeam2", "Marines")
+
 local EZFruitSniper = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UIGradient = Instance.new("UIGradient")
@@ -153,12 +160,6 @@ UIStroke.Thickness = 2
 UIStroke.Transparency = 0.5
 UIStroke.Parent = AbortButton
 
-local TweenService = game:GetService("TweenService")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-local CommF = ReplicatedStorage.Remotes.CommF_
-
 local AutoExec = true
 
 AbortButton.MouseButton1Click:Connect(function()
@@ -237,7 +238,7 @@ local function Main()
             StoreFruit(Fruit)
             task.wait(1)
             if AutoExec then
-                queue_on_teleport(game:HttpGet("https://raw.githubusercontent.com/maikerujakuson3150-cpu/blox-fruits-fruit-sniper/refs/heads/main/fruit-sniper.lua"))
+                queue_on_teleport()
                 ServerHop()
             end
         end
