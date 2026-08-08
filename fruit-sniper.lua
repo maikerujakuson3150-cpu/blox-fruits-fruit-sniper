@@ -237,7 +237,7 @@ local function Main()
             StoreFruit(Fruit)
             task.wait(1)
             if AutoExec then
-                queue_on_teleport()
+                queue_on_teleport(game:HttpGet("https://raw.githubusercontent.com/maikerujakuson3150-cpu/blox-fruits-fruit-sniper/refs/heads/main/fruit-sniper.lua"))
                 ServerHop()
             end
         end
