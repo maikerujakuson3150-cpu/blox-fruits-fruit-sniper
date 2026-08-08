@@ -2,6 +2,8 @@ if not (game.PlaceId == 79091703265657 or game.PlaceId == 85211729168715 or game
     return
 end
 
+task.wait(3)
+
 local TweenService = game:GetService("TweenService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
